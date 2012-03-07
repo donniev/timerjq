@@ -11,6 +11,7 @@
 				initialCountdown:0,
 				showDays:false,
 				showButtons:true,
+				showDisplay:true,
 				displayClass:"",
 				autoStart:false,
 				draggable:false,
@@ -28,7 +29,10 @@
 					me.draggable();
 				}
 				if(!options.showButtons){
-					me.children(".timerButtonGroup").hide();
+					me.find(".timerButtonGroup").hide();
+				}
+				if(!options.showDisplay){
+					me.find(".timerDisplay").hide();
 				}
 				if(options.autoStart){
 					me.find(".timerStart").click();
@@ -146,6 +150,15 @@
 				var me=$(this);
 				if(method=="init"){
 					init(_options,me);
+				}
+				if("method"=="start"){
+						me.find(".timerStart").click();
+				}
+				if("method"=="pause"){
+						me.find(".timerPause").click();
+				}
+				if("method"=="stop"){
+						me.find(".timerStop").click();
 				}
 				if(method=="remove"){
 					me.children(".timerDisplay,.timerButtonGroup").remove();
