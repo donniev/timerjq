@@ -1,5 +1,5 @@
 /**
- * @author don vawter
+ * @author don vawter pushing to git
  */
 (function($){
 	$.fn.extend({
