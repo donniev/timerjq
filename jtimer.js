@@ -1,5 +1,5 @@
 /**
- * @author don
+ * @author don vawter
  */
 (function($){
 	$.fn.extend({
