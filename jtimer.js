@@ -26,7 +26,8 @@
 				me.data("timerpluginoptions",options);
 				makeHtml(me);
 				if (options.draggable) {
-					me.draggable();
+					
+					me.touch();
 				}
 				if(!options.showButtons){
 					me.find(".timerButtonGroup").hide();
@@ -151,13 +152,13 @@
 				if(method=="init"){
 					init(_options,me);
 				}
-				if("method"=="start"){
+				if(method=="start"){
 						me.find(".timerStart").click();
 				}
-				if("method"=="pause"){
+				if(method=="pause"){
 						me.find(".timerPause").click();
 				}
-				if("method"=="stop"){
+				if(method=="stop"){
 						me.find(".timerStop").click();
 				}
 				if(method=="remove"){
@@ -177,4 +178,4 @@
 			});
 		}
 	})
-})(jQuery);
+})(jQuery)
